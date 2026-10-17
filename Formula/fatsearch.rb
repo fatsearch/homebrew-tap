@@ -1,25 +1,25 @@
 class Fatsearch < Formula
   desc "Web pages and documents turned into small, clean, cached Markdown for AI agents"
   homepage "https://github.com/fatsearch/fatsearch"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.1/fatsearch-aarch64-apple-darwin.tar.xz"
-      sha256 "44617bd2367dc0163c47aa7e39d8439e90bc4321d0ff5869790ac936ccc41c45"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.2/fatsearch-aarch64-apple-darwin.tar.xz"
+      sha256 "82f9eaf018ae9d34fb61eebc7d4d3ccfb7e33002d1658295ba4574b40251ab28"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.1/fatsearch-x86_64-apple-darwin.tar.xz"
-      sha256 "e3431dd2c3caa9a6a85c893374e82d5e55910ead7396d0e2b16f07629bf5afed"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.2/fatsearch-x86_64-apple-darwin.tar.xz"
+      sha256 "c668756e585c6334be76283aed1a8b2e5e197de64991ec00eba4c4c5f17d2fc8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.1/fatsearch-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "90bc214e64844975197f649744abc5ef0f38588d3ca79cbe63a057f42433b38c"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.2/fatsearch-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "12ba9b7e150d727ac5e7fdce7946af2b327e21d4ea6dd9da0b13a1d9515fa20e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.1/fatsearch-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "825f3dfa15c718bb6f21020e28b7feff3af74701f9de5fc1c65623600f848ac2"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.2/fatsearch-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bd7d46682c4e89f129d37fbc5a2acca476b327e1f7983ba60f2832270019803f"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
