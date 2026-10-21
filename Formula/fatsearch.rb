@@ -1,35 +1,55 @@
 class Fatsearch < Formula
   desc "Web pages and documents turned into small, clean, cached Markdown for AI agents"
-  homepage "https://github.com/fatsearch/fatsearch"
-  version "0.1.3"
+  homepage "https://fatsearch.com"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.3/fatsearch-aarch64-apple-darwin.tar.xz"
-      sha256 "96187150898a9b0ab59d9a8e70a635b6416eced6640c7bf9062b52dc2dd325be"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.2.1/fatsearch-aarch64-apple-darwin.tar.xz"
+      sha256 "689a70670ad4171947461f7cdda4d6469bdaad38ea46ae32c0078857bf2debdd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.3/fatsearch-x86_64-apple-darwin.tar.xz"
-      sha256 "6ada8588403c59f5804cc754836a9916c09495b7c21b21ab4111f5dc1c16f985"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.2.1/fatsearch-x86_64-apple-darwin.tar.xz"
+      sha256 "553abdd3ba6f08a7aaed4d8c89ebf86884b0413f4cac9b76ef6cc96e560b31b0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.3/fatsearch-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "97b7c37674ec8d599a36c23ff21cc1b6c40c684269ad15d33dceea350ce90726"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.2.1/fatsearch-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5181f9864c3a6cc087a3936fc0136afe015c0b41098d66966977afd778e7745d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fatsearch/fatsearch/releases/download/v0.1.3/fatsearch-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a61b31cfb8dc5406580572ac435b69931083d5c66253102d3af7ee5ca9a87c92"
+      url "https://github.com/fatsearch/fatsearch/releases/download/v0.2.1/fatsearch-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9043e61bbed1268323a30b7f769ef10fc29f35f79e50ee010155f7a37d7c3888"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-pc-windows-gnu":     {},
-    "x86_64-unknown-linux-gnu":  {},
+    "aarch64-apple-darwin":      {
+      fats: [
+        "fatsearch",
+      ],
+    },
+    "aarch64-unknown-linux-gnu": {
+      fats: [
+        "fatsearch",
+      ],
+    },
+    "x86_64-apple-darwin":       {
+      fats: [
+        "fatsearch",
+      ],
+    },
+    "x86_64-pc-windows-gnu":     {
+      "fats.exe": [
+        "fatsearch.exe",
+      ],
+    },
+    "x86_64-unknown-linux-gnu":  {
+      fats: [
+        "fatsearch",
+      ],
+    },
   }.freeze
 
   def target_triple
